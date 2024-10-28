@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Project</title>
+    <!-- Tailwind CSS stylesheet -->
+    <link href="./output.css" rel="stylesheet" />
+    <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+  </head>
+  <body>
+       <!-- Navbar -->
+    <nav class="bg-white px-4 md:px-8 py-4 relative">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#">
+          <img src="./src/assets/logo.png" alt="Logo" class="h-8 md:h-10" />
+        </a>
+
+        <!-- Hamburger Icon for Mobile -->
+        <button
+          id="menu-btn"
+          class="block md:hidden focus:outline-none z-50"
+          aria-label="Toggle Menu"
+        >
+          <img
+            src="./src/assets/menu-open.png"
+            alt="Hamburger Menu Icon"
+            id="hamburger-icon"
+            class="h-8"
+          />
+        </button>
+
+        <!-- Navigation Links -->
+        <ul
+          id="nav-links"
+          class="hidden flex-col md:flex md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-8 list-none items-baseline  absolute md:static top-16 left-0 w-full bg-white md:w-auto md:bg-transparent transition-all duration-300 ease-in-out z-40 p-4 md:p-0"
+        >
+          <li><a href="#" class="block py-2 px-4 md:px-0">Solution</a></li>
+          <li><a href="#" class="block py-2 px-4 md:px-0">Pricing</a></li>
+          <li><a href="#" class="block py-2 px-4 md:px-0">About Us</a></li>
+          <li><a href="#" class="block py-2 px-4 md:px-0">Contact</a></li>
+        </ul>
+
+        <!-- Language, Login, and CTA (for larger screens) -->
+        <div class="hidden md:flex space-x-2 md:space-x-4 list-none">
+          <a href="#"
+            ><img
+              src="./src/assets/flag.png"
+              alt="Language Icon"
+              class="w-8 h-6 md:w-10 md:h-6"
+          /></a>
+          <a href="#" class="py-1">English</a>
+          <a href="#" class="py-1">Login</a>
+          <a href="#" class="bg-blue-500 text-white py-1 px-3 rounded-md"
+            >Get started</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="relative w-full h-screen bg-cover bg-bottom pt-1"
+      style="background-image: url('./src/assets/hero.jpg')"
+      aria-labelledby="hero-heading"
+    >
+      <!-- Background Overlay -->
+      <div class="absolute inset-0 bg-black/30"></div>
+
+      <!-- Hero Text -->
+      <div class="relative max-w-2xl mt-8 md:mt-24 mx-4 md:mx-16">
+        <h1
+          id="hero-heading"
+          class="text-4xl md:text-7xl font-extrabold mb-4 md:mb-8 text-white"
+        >
+          Make Europe Your Domestic Market
+        </h1>
+        <p class="text-2xl md:text-4xl font-semibold mb-4 md:mb-8 text-white">
+          We make selling to Europe as easy as selling to your own country.
+        </p>
+        <!-- Call-to-Action Button -->
+        <button
+          class="flex items-center justify-center bg-blue-800 text-white py-2 md:py-3 px-8 md:px-12 rounded-md border-white border-2"
+          aria-label="Talk to Us"
+        >
+          <img
+            class="w-5 md:w-6 h-auto"
+            src="./src/assets/messenger.png"
+            alt="Messenger Icon"
+          />
+          <span class="ml-2 font-bold">Talk to Us</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Sales Page -->
+    <section
+      class="mx-auto px-4 md:px-8 mt-12 md:mt-24"
+      aria-labelledby="sales-heading"
+    >
+      <h2
+        id="sales-heading"
+        class="text-3xl md:text-5xl font-extrabold text-center md:text-left mb-8 max-w-4xl mx-auto"
+      >
+        Give Your Sales and Marketing Team Cross-Border Access
+      </h2>
+      <div class="flex flex-col md:flex-row justify-around items-center">
+        <!-- Content left -->
+        <div class="max-w-lg my-8 py-8 md:my-24 md:py-12">
+          <div class="flex items-center mb-8">
+            <img
+              class="w-10 md:w-12"
+              src="./src/assets/rocket.png"
+              alt="Rocket Icon"
+            />
+            <p class="ml-4 text-xl md:text-2xl font-bold">
+              Boost your marketing ROI significantly through Eurozonic's
+              powerful platform.
+            </p>
+          </div>
+          <div class="flex items-center">
+            <img
+              class="w-10 md:w-12"
+              src="./src/assets/line-graph.png"
+              alt="Line Graph Icon"
+            />
+            <p class="ml-4 text-xl md:text-2xl font-bold">
+              Expand your market reach and tap into new customer segments.
+            </p>
+          </div>
+        </div>
+        <!-- Content right -->
+        <div class="mt-8 md:mt-0">
+          <img
+            class="max-w-full md:max-w-2xl"
+            src="./src/assets/chart-right.png"
+            alt="Market Chart"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Trade Page -->
+    <section
+      class="relative flex flex-col items-start text-white bg-cover bg-center w-full py-16 px-4 md:py-24 md:px-8"
+      style="background-image: url('./src/assets/sky-bg.jpg')"
+      aria-labelledby="trade-heading"
+    >
+      <!-- Container for consistent alignment -->
+      <div class="max-w-4xl w-full mx-auto">
+        <!-- Main Heading -->
+        <h2
+          id="trade-heading"
+          class="text-4xl md:text-7xl font-extrabold text-left mb-4"
+        >
+          Beat the Trade Barriers
+        </h2>
+        <!-- Subheading -->
+        <p class="text-2xl md:text-5xl font-bold text-left mb-12 md:mb-16">
+          Give Your Sales and Marketing team Cross-Border Access
+        </p>
+      </div>
+
+      <!-- Cards Container -->
+      <div class="flex flex-wrap justify-center gap-6 px-2 md:px-4 mx-auto">
+        <!-- Card 1 -->
+        <div class="max-w-xs rounded-lg bg-white px-5 py-6 shadow-lg">
+          <img
+            class="w-12 mb-4 mx-auto"
+            src="./src/assets/pin.png"
+            alt="Pin Icon"
+          />
+          <h2 class="text-black font-extrabold text-2xl mb-2 text-center">
+            Localise
+          </h2>
+          <p class="text-gray-600 mb-4 text-left">
+            Website localisation, real-time translations of text chats,
+            integrations into 3rd party collaboration software, all with
+            industry-tailored vocabulary.
+          </p>
+          <a href="#" class="mt-3 text-blue-800 text-left">See our guideline</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="max-w-xs rounded-lg bg-white px-5 py-6 shadow-lg">
+          <img
+            class="w-12 mb-4 mx-auto"
+            src="./src/assets/users.png"
+            alt="Users Icon"
+          />
+          <h2 class="text-black font-extrabold text-2xl mb-2 text-center">
+            Advertise
+          </h2>
+          <p class="text-gray-600 mb-4 text-left">
+            Enter the whole European market with multi-lingual Google Adwords,
+            LinkedIn integrations, TED (EU tenders) and other channels.
+          </p>
+          <a href="#" class="mt-3 text-blue-800 text-left">See our guideline</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="max-w-xs rounded-lg bg-white px-5 py-6 shadow-lg">
+          <img
+            class="w-12 mb-4 mx-auto"
+            src="./src/assets/cart.png"
+            alt="Cart Icon"
+          />
+          <h2 class="text-black font-extrabold text-2xl mb-2 text-center">
+            Sell
+          </h2>
+          <p class="text-gray-600 mb-4 text-left">
+            Visualise and analyse your digital marketing and sales performance
+            across all European markets. Discover high-demand geographies and
+            prioritise your target markets for maximum ROI.
+          </p>
+          <a href="#" class="mt-3 text-blue-800 text-left">See our guideline</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Our Customers Section -->
+    <section class="py-16 px-4 md:px-8 bg-gray-50">
+      <!-- Center the entire content -->
+      <div class="max-w-3xl mx-auto  ">
+        <!-- Section Heading -->
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">
+          Our Customers
+        </h2>
+    
+        <!-- Cards Container -->
+        <div class="flex flex-col md:flex-row justify-center md:justify-start gap-6">
+          <!-- Card 1 -->
+          <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden flex flex-col">
+            <!-- Image -->
+          <!-- Image -->
+          <!-- Image -->
+          <img
+            src="./src/assets/b2b.png"
+            alt="B2B Image"
+            class="w-full h-48 object-cover"
+          />
+          <!-- Card Content -->
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">B2B</h3>
+            <p class="text-gray-600 mb-4">
+              We help your B2B marketing and sales efforts by providing a native
+              digital presence, generating proposals and matching suppliers with
+              EU tenders from across Europe. Learn more.
+            </p>
+            <a
+              href="#"
+              class="flex items-center w-32 h-10 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-md hover:bg-blue-700 mt-auto"
+            >
+              Read more <span class="ml-2 text-xl">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden flex flex-col"
+        >
+          <!-- Image -->
+          <img
+            src="./src/assets/b2c.png"
+            alt="B2C Image"
+            class="w-full h-48 object-cover"
+          />
+          <!-- Card Content -->
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">B2C</h3>
+            <p class="text-gray-600 mb-4">
+              Make your e-commerce experience native for your European
+              customers, whether you are using any of the big eCommerce
+              platforms or your home-built solution.
+            </p>
+            <a
+              href="#"
+              class="flex items-center w-32 h-10 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-md hover:bg-blue-700 mt-auto"
+            >
+              Read more <span class="ml-2 text-xl">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Footer Section -->
+<footer class="bg-gray-800 text-gray-300 py-12">
+  <!-- Main Container -->
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Top Section -->
+    <div class="text-center mb-8">
+      <!-- Brand Logo -->
+      <h2 class="text-4xl font-extrabold text-blue-500 mb-2">Eurozonic</h2>
+      <!-- Tagline -->
+      <p class="text-lg">Connect with customers across Europe.</p>
+    </div>
+
+    <!-- Links Section -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <a href="#" class="text-sm hover:underline">Solutions</a>
+      <a href="#" class="text-sm hover:underline">Home</a>
+      <a href="#" class="text-sm hover:underline">How it Works</a>
+      <a href="#" class="text-sm hover:underline">Solutions</a>
+      <a href="#" class="text-sm hover:underline">Resources</a>
+      <a href="#" class="text-sm hover:underline">Customers</a>
+      <a href="#" class="text-sm hover:underline">Pricing</a>
+    </div>
+
+    <!-- Contact Details Section -->
+    <div class="flex flex-col md:flex-row justify-center gap-12 md:gap-24 mb-12">
+      <!-- Barcelona Office -->
+      <div class="text-center md:text-left">
+        <h3 class="text-lg font-bold mb-4">BARCELONA</h3>
+        <!-- Address -->
+        <div class="flex items-center mb-2">
+          <img
+            src="./src/assets/pin-black.png"
+            alt="Location Icon"
+            class="w-4 h-4 mr-2"
+          />
+          <p class="text-sm">
+            Còrsega Street 284, Example District, 08008 Barcelona
+          </p>
+        </div>
+        <!-- Phone -->
+        <div class="flex items-center mb-2">
+          <img
+            src="./src/assets/phone-black.png"
+            alt="Phone Icon"
+            class="w-4 h-4 mr-2"
+          />
+          <p class="text-sm">Office: +34 71 324 9380</p>
+        </div>
+        <!-- Email -->
+        <div class="flex items-center">
+          <img
+            src="./src/assets/email-black.png"
+            alt="Email Icon"
+            class="w-4 h-4 mr-2"
+          />
+          <p class="text-sm">Contact: info@eurozonic.com</p>
+        </div>
+      </div>
+
+      <!-- Dublin Office -->
+      <div class="text-center md:text-left">
+        <h3 class="text-lg font-bold mb-4">DUBLIN</h3>
+        <!-- Address -->
+        <div class="flex items-center mb-2">
+          <img
+            src="./src/assets/pin-black.png"
+            alt="Location Icon"
+            class="w-4 h-4 mr-2"
+          />
+          <p class="text-sm">
+            Herbert House, Harmony Row, Dublin 2, D02 H270
+          </p>
+        </div>
+        <!-- Phone -->
+        <div class="flex items-center mb-2">
+          <img
+            src="./src/assets/phone-black.png"
+            alt="Phone Icon"
+            class="w-4 h-4 mr-2"
+          />
+          <p class="text-sm">Office: +353 83 058 313</p>
+        </div>
+        <!-- Email -->
+        <div class="flex items-center">
+          <img
+            src="./src/assets/email-black.png"
+            alt="Email Icon"
+            class="w-4 h-4 mr-2"
+          />
+          <p class="text-sm">Contact: info@eurozonic.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="text-center text-sm mt-8">
+      <p>© 2024 Eurozonic. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const navLinks = document.getElementById("nav-links");
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+
+  // Paths to the custom icons
+  const openIconPath = "./src/assets/menu-open.png"; // 3 lines icon
+  const closeIconPath = "./src/assets/menu-close.png"; // Cross icon
+
+  menuBtn.addEventListener("click", () => {
+    // Toggle visibility and layout of the navigation links
+    navLinks.classList.toggle("hidden");
+    navLinks.classList.toggle("flex");
+    navLinks.classList.toggle("flex-col");
+
+    // Toggle the icon between open and close
+    if (navLinks.classList.contains("flex")) {
+      hamburgerIcon.src = closeIconPath; // Show close icon
+    } else {
+      hamburgerIcon.src = openIconPath; // Show open icon
+    }
+  });
+</script>
+  </body>
+</html>
